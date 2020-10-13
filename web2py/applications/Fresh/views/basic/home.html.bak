@@ -1,0 +1,29 @@
+{{extend 'layout.html'}}
+
+{{block header}}
+<div class="jumbotron jumbotron-fluid background" style="background-color: #DEFFC2; color:white; padding:30px;word-wrap:break-word;">
+  <div class="container center">
+    <h6 class="a">Welcome to Fresh Veggies</h6>
+  </div>
+</div>
+{{end}}
+
+<div class="row">
+  <div class="col-md-12" style="background-image: url(https://img.wallpapersafari.com/desktop/1600/900/87/33/zj7VWp.jpg)">
+    {{if 'message' in globals():}}
+    <h5 class="b">{{=message}}</h5>
+    <h5 class="b">Fair Prices</h5>
+    <h5 class="b">Fair Trade</h5>
+    <ol style="word-wrap:break-word;">
+      <li>{{=T('To use our site you need to register like Farmer or Buyer!')}}</li>
+      
+      
+    </ol>
+   </div>
+    {{elif 'content' in globals():}}
+    {{=content}}
+    {{else:}}
+    {{=BEAUTIFY(response._vars)}}
+    {{pass}}
+  </div>
+</div>

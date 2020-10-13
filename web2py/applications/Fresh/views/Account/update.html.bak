@@ -1,0 +1,10 @@
+{{extend 'layout.html'}}
+<h1>Update your account</h1>
+{{if is_valid==True:}}
+{{=form}}
+{{pass}}
+{{if is_valid==False:}}
+<p>Not Authorized</p>
+{{pass}}
+<br/>
+<hr/>

@@ -1,0 +1,31 @@
+{{extend 'layout.html'}}
+<h1>My posts</h1>
+
+<hr/> 
+{{ for x in rows: }}
+<div class ="row">
+    <img class="col col-lg-4 col-md-6 col-sm-6 col-xs-12" src="{{=x.picture}}" alt="image" />
+    <div class="col col-lg-8 col-md-6 col-sn-6 col-xs-12">
+        <h1>
+            <b>{{=x.product_name}}</b>
+        </h1>
+        
+        <p>
+            <b>{{=x.description}}</b>
+        </p>
+        <p>
+            {{=x.price}} MDL\KG
+        </p>
+        <p>
+            Status: {{=x.avability}}
+        </p>
+       
+        <a href="{{=URL('update/{}'.format(x.id))}}">{{=BUTTON("Update", _class='btn')}}</a>
+        </p> 
+        
+    </div>
+</div>
+
+<hr/>
+
+{{ pass }}

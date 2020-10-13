@@ -1,0 +1,11 @@
+# -*- coding: utf-8 -*-
+# try something like
+def index(): return dict(message="hello from prod.py")
+
+def post():
+    form = SQLFORM(db.Products).proces()
+    return locals()
+
+def view():
+    rows = db(db.Products).select(orderby = ~db.Products.id)
+    return locals()

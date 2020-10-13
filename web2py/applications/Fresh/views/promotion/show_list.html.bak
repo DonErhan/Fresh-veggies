@@ -1,0 +1,5 @@
+{{extend 'layout.html'}}
+<h1>This is the promotion/show_list.html template</h1>
+<h2>
+ {{=form}}   
+</h2>

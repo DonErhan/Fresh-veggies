@@ -1,0 +1,6 @@
+{{extend 'layout.html'}}
+<h1>Complete account</h1>
+{{=form}}
+
+<hr/>
+| <a href = "main">Profile page</a> |
